@@ -7,16 +7,22 @@ que te permite crear un espacio aislado donde puedes instalar
 y manejar las dependencias (bibliotecas y versiones de Python) 
 específicas para un proyecto en particular, sin afectar al sistema global
 
-`pip list` muestra las bibliotecas instaladas en el entorno virtual o global
+- `pip list`: Muestra las bibliotecas instaladas en el entorno virtual o global
 
 ¿Cómo crear un entorno virtual? (entorno aislado del global)
 
-`python -m venv .venv` -> Windows
-`python3 -m venv .venv` -> Linux o Mac
+- `python -m venv .venv` (Windows)
+- `python3 -m venv .venv` (Linux o Mac)
 
 ¿Cómo activar el entorno virtual?
-`.\.venv\Scripts\activate`  (Windows Powershell)
-`source .venv/bin/activate` (Linux o Mac)
+- `.\.venv\Scripts\activate`  (Windows Powershell)
+- `source .venv/bin/activate` (Linux o Mac)
+
+¿Cómo crear requirements.txt?
+- `pip freeze >> requirements.txt`
+
+¿Cómo instalar paquetes desde requirements.txt?
+- `pip install -r requirements.txt`
 
 ## Instalación Django
 
