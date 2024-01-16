@@ -1,21 +1,19 @@
 {% extends 'core/base.html' %}
     
 {% block title %}
-    | Cliente
+    | Producto
 {% endblock title %}
     
 {% block content_title %}
-    CLIENTE
+    PRODUCTO
 {% endblock content_title %}
 
 {% block content %}
 
     <div class="card text-center">
         <div class="card-body">
-            <h2 class="card-title">Clientes</h2>
+            <h2 class="card-title">Categorías de Producto</h2>
             <div class="d-flex justify-content-center gap-4">
-                <a class="btn btn-primary w-50" href="{% url 'cliente:pais_list' %}">Lista de países</a>
-                <a class="btn btn-primary w-50" href="{% url 'cliente:cliente_list' %}">Lista de clientes</a>
                 <a class="btn btn-primary w-50" href="{% url 'core:index' %}">Inicio</a>
             </div>
         </div>
