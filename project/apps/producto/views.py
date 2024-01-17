@@ -26,7 +26,7 @@ class ProductoCategoriaList(ListView):
     model = ProductoCategoria
     # template_name = "producto/productocategoria_listXX.html"
 
-    def get_query(self):
+    def get_queryset(self):
         if self.request.GET.get("consulta"):
             consulta = self.request.GET.get("consulta")
             object_list = ProductoCategoria.objects.filter(nombre__icontains=consulta)
