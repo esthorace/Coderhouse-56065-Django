@@ -21,7 +21,7 @@
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
         <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'core/img/caja-pandora.webp' %}" alt="..." /></div>
         <div class="col-lg-5">
-            <h1 class="font-weight-light">Business Name or Tagline</h1>
+            <h1 class="font-weight-light">La Caja de Pandora</h1>
             <p>La Caja de Pandora es un negocio único que te brindará nuevas oportunidades</p>
             <a class="btn btn-success" href="https://wa.me/123456789" target="_blank">WhatsApp</a>
         </div>
@@ -33,6 +33,7 @@
     <!-- Content Row-->
     <div class="row gx-4 gx-lg-5">
         {% include 'core/tarjeta.html' with titulo="Tarjeta 1" texto="Texto de tarjeta"%}
-        {% include 'core/tarjeta.html' with titulo="Ropa" imagen_url="https://w7.pngwing.com/pngs/861/112/png-transparent-figure-drawing-clothing-dress-art-clothes-purple-fashion-color.png" %}
+        {% include 'core/tarjeta.html' with titulo="Tarjeta 2" %}  
+        {% include 'core/tarjeta.html' with titulo="Ropa" imagen_url="https://w7.pngwing.com/pngs/861/112/png-transparent-figure-drawing-clothing-dress-art-clothes-purple-fashion-color.png" texto="Texto de la tarjeta" %}
     </div>
 {% endblock content %}

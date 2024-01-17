@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
-from . import models
-from . import forms
+from . import forms, models
+
 
 def index(request):
     return render(request, "cliente/index.html")
@@ -13,10 +13,12 @@ def pais_list(request):
     context = {"paises": paises}
     return render(request, "cliente/pais_list.html", context)
 
+
 def cliente_list(request):
     clientes = models.Cliente.objects.all()
     context = {"clientes": clientes}
     return render(request, "cliente/cliente_list.html", context)
+
 
 def cliente_create(request) -> HttpResponse:
     if request.method == "POST":

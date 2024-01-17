@@ -5,28 +5,38 @@
 {% endblock title %}
     
 {% block content_title %}
-    CLIENTE
+    Lista de Clientes
 {% endblock content_title %}
 
 {% block content %}
-    <h2>Cliente: Lista</h2>
 
-    <table border="1">
+    <table class="table">
         <thead>
             <th>Nombre</th>
             <th>Apellido</th>
+            <th>Nacimiento</th>
+            <th>País de origen</th>
         </thead>
         <tbody>
             {% for cliente in clientes %}
                 <tr>
                     <td>{{ cliente.nombre }}</td>
                     <td>{{ cliente.apellido }}</td>
+                    {% if cliente.nacimiento %}
+                        <td>{{ cliente.nacimiento }}</td>
+                    {% endif %}
+                    {% if cliente.pais_origen_id %}
+                        <td>{{ cliente.pais_origen_id }}</td>
+                    {% endif %}
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4">No hay registros</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 
-    <button><a href="{% url 'cliente:index' %}">Atrás</a></button>
-    <button><a href="{% url 'core:index' %}">Inicio</a></button>
+    <a href="{% url 'cliente:index' %}" class="btn btn-secondary">Atrás</a>
 
 {% endblock content %}

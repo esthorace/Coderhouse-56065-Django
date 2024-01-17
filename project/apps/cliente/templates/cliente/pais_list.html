@@ -5,17 +5,17 @@
 {% endblock title %}
     
 {% block content_title %}
-    CLIENTE
+    Lista de Países
 {% endblock content_title %}
 
 {% block content %}
-    <h2>Países: Lista</h2>
-
     <ul>
         {% for pais in paises %}
             <li>{{ pais.nombre }}</li>
+        {% empty %}
+            <p>No hay registros</p>
         {% endfor %}
     </ul>
-    <button><a href="{% url 'cliente:index' %}">Atrás</a></button>
-    <button><a href="{% url 'core:index' %}">Inicio</a></button>
+    <a href="{% url 'cliente:index' %}" class="btn btn-secondary">Atrás</a>
+    
 {% endblock content %}
